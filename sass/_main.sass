@@ -112,6 +112,9 @@ body
 		padding: 6px 
 		background: rgba(#000, .1) 
 		position: relative
+		+transition(all .2s ease-in-out)
+		&:hover
+			background: rgba(#000, .2) 
 		img
 			float: left
 		i
@@ -124,5 +127,31 @@ body
 			position: absolute
 			top: 6px  
 			left: 0 
-		
+.footer
+	height: 31px 
+	text-align: center
+	line-height: 31px 
+	background: #544E4E 
+	.footer__copy
+		display: inline-block
+		color: #908985 
+		a
+			color: #908985
+	.footer__email
+		margin-left: 25px 
+.social
+	display: inline-block
+	padding-top: 4px 
+	margin-left: 50px 
+	vertical-align: top
+	a
+		display: inline-block
+		opacity: .7
+		+transition(all .2s linear)
+		&:hover
+			opacity: 1 
+	@each $s in fb, li, vk, tw, gp
+		.social__#{$s}
+			+s(#{$s})
+				
 
